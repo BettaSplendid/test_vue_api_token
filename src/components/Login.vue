@@ -1,5 +1,5 @@
 <template>
-  <button @click="lapin">aaaaaa</button>
+  <button @click="lapin()">aaaaaa</button>
 </template>
 
 <script>

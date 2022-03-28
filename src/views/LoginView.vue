@@ -36,8 +36,8 @@ async function start_submit() {
   let response = await fetch("https://apidoctor.quidam.re/api/login_check", {
     method: "POST",
     body: JSON.stringify({
-      "username": form_e.username,
-      "password": form_e.password,
+      username: form_e.username,
+      password: form_e.password,
     }),
     headers: {
       Accept: "application/json",
@@ -48,6 +48,8 @@ async function start_submit() {
     .catch((err) => err);
 
   console.log(response.token);
-  console.log(response.refreshtoken);
+  console.log(response.refresh_token);
+  localStorage.setItem("r_response_token", response.token);
+  localStorage.setItem("r_refresh_token", response.refresh_token);
 }
 </script>
