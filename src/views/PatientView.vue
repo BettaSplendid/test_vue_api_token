@@ -17,6 +17,7 @@ import { usetoken_store } from "../stores/token_store";
 
 onMounted(() => {
   console.log("On mounted");
+  console.log(sessionStorage.getItem("r_response_token"));
   fetch_patients();
 });
 
@@ -27,13 +28,19 @@ async function fetch_patients() {
     "https://apidoctor.quidam.re/api/consultations",
     {
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
+        Authorization: `Bearer ${sessionStorage.getItem("r_response_token")}`,
       },
     }
   )
-    .then((response) => response.json())
+    .then((response) => {
+      response.json();
+      console.log(response.data["hydra:member"]);
+      return response
+    })
     .catch((e) => e);
+  console.log(collected_patients);
+  // console.log(collected_patients.data["hydra:member"][0]);
+
   if (collected_patients instanceof Array) {
     console.log("Collected patients check");
     let patients = {};

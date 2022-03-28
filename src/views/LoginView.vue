@@ -49,7 +49,7 @@ async function start_submit() {
 
   console.log(response.token);
   console.log(response.refresh_token);
-  localStorage.setItem("r_response_token", response.token);
-  localStorage.setItem("r_refresh_token", response.refresh_token);
+  sessionStorage.setItem("r_response_token", response.token);
+  sessionStorage.setItem("r_refresh_token", response.refresh_token);
 }
 </script>
