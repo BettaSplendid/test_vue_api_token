@@ -7,7 +7,7 @@
       We are in ul
       <li v-for="item of patient_spaghetti_id" :key="item">
         <PatientItem :patient="item" />
-      </li>
+      </li>a
     </ul>
   </div>
 
@@ -45,8 +45,8 @@ async function fetch_patients() {
     .then((response) => response.json())
     .catch((e) => e);
   // console.log(collected_patients);
-  console.log(collected_patients["hydra:member"]); //This one works
-  console.log(collected_patients["hydra:member"][0]); //This one works
+  // console.log(collected_patients["hydra:member"]); //This one works
+  // console.log(collected_patients["hydra:member"][0]); //This one works
   // console.log(collected_patients["hydra:member"][0]["id"]); //This one works
 
   if (collected_patients instanceof Object) {
