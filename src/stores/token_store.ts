@@ -2,7 +2,10 @@ import { defineStore } from "pinia";
 
 export const usetoken_store = defineStore({
   id: "token_store",
-  state: () => ({}),
+  state: () => ({
+    patient: {},
+    patients: [],
+  }),
   getters: {},
   actions: {},
 });

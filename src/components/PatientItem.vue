@@ -1,18 +1,24 @@
 <template>
   <div>
-    <h3>Patient item</h3>
     <br />
-    <!-- <h1>{{ patient.title }}</h1>
-    <p>{{ patient.content }}</p> -->
-    <!-- <p>
-      <button v-on:click="Sendpatient">
-        /patient ok
-        
-      </button>
-    </p> -->
+    <hr />
+    <h3>Patient item</h3>
+    <p> {{patient}} </p>
+    <!-- <ul>
+      <li>
+        id: {{patient.id}}
+      </li>
+      <li>
+        date :
+        {{ patient.date }}
+      </li>
+    </ul> -->
+    <hr />
   </div>
 </template>
 
-<script setup>
-// <!-- <router-link to="/patient">/patient ok</router-link>
+<script>
+export default {
+  props: ["patient"],
+};
 </script>
