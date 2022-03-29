@@ -3,7 +3,7 @@
     <br />
     <hr />
     <h3>Patient item</h3>
-    <p> {{patient}} </p>
+    <p>{{ patient }}</p>
     <!-- <ul>
       <li>
         id: {{patient.id}}
