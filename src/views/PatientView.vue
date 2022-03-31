@@ -21,7 +21,7 @@ import PatientItem from "../components/PatientItem.vue";
 // import { usetoken_store } from "../stores/token_store";
 import { ref } from "vue";
 
-//lapinnot
+//lapinno
 const patients = ref(0);
 // let patient_spaghetti_id = [];
 const patient_spaghetti_id = ref([]);
